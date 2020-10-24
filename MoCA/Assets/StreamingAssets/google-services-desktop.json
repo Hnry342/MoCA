@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "880701536462",
+    "firebase_url": "https://moca-ea07e.firebaseio.com",
+    "project_id": "moca-ea07e",
+    "storage_bucket": "moca-ea07e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:880701536462:android:96460310fa489b86d5f89f",
+        "android_client_info": {
+          "package_name": "com.Henry.MoCA"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "880701536462-keqcbuigf757koq4bn64upf9bafnolc8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBZr7fQACIM-fRHIrCDu_8fLEZz1MhFbAA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "880701536462-keqcbuigf757koq4bn64upf9bafnolc8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
