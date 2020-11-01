@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - AuthManager
+  - Brush
   layers:
   - Default
   - TransparentFX
