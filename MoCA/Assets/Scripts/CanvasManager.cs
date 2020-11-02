@@ -39,7 +39,7 @@ public class CanvasManager : MonoBehaviour
         }
         if ( PlayerPrefs.GetInt("currentQuestion") == 2)
         {
-            Debug.Log("QUESTION 2");
+            //Debug.Log("QUESTION 2");
             Question2();
         }
 
