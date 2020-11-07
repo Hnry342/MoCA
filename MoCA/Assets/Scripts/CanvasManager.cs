@@ -37,10 +37,15 @@ public class CanvasManager : MonoBehaviour
         {
             Question1();
         }
-        if ( PlayerPrefs.GetInt("currentQuestion") == 2)
+        else if ( PlayerPrefs.GetInt("currentQuestion") == 2)
         {
             //Debug.Log("QUESTION 2");
             Question2();
+        }
+        else if ( PlayerPrefs.GetInt("currentQuestion") == 3)
+        {
+            //Debug.Log("QUESTION 3");
+            Question3();
         }
 
     }

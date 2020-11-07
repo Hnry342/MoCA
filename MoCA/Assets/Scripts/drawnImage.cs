@@ -4,16 +4,6 @@ using UnityEngine;
 
 public class drawnImage : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-       
-    }
 
     public void CubeBtn()
     {
@@ -27,13 +17,46 @@ public class drawnImage : MonoBehaviour
             ScreenCapture.CaptureScreenshot("cube.png");
             Debug.Log("Screenshot");
 
+            StartCoroutine(clearCoroutine());
+        
+        }
+    }
 
-             //Destroy Drawing
+    public void ClockBtn()
+    {
+         if (PlayerPrefs.GetInt("currentQuestion").ToString()== "3")
+        {
+            //Remove UI before screenshot
+            GameObject.Find("ClockBtn").SetActive(false);
+            GameObject.Find("ClockTxt").SetActive(false);
+            //Screenshot 
+            ScreenCapture.CaptureScreenshot("clock.png");
+            Debug.Log("Screenshot");
+
+            StartCoroutine(clearCoroutine());
+        
+        }
+    }
+
+        IEnumerator clearCoroutine()
+    {
+            //Destroy Drawing wait 1 second to allow for screenshot
+            yield return new WaitForSeconds(1);
+            //Destroy drawing
+            GameObject[] brushes = GameObject.FindGameObjectsWithTag("Brush");
+            foreach(GameObject brush in brushes)
+            {
+                GameObject.Destroy(brush);   
+            }         
+            //Change current question to enable/disable canvas or switch scene
             if (PlayerPrefs.GetInt("currentQuestion").ToString()== "2")
             {
-                Destroy (GameObject.FindWithTag("Brush"));
-            }
             PlayerPrefs.SetInt("currentQuestion", 3);
-        }
+            }
+            else if (PlayerPrefs.GetInt("currentQuestion").ToString()== "3")
+            {
+
+            }
+
     }
 }

@@ -72,7 +72,12 @@ public class TouchObject : MonoBehaviour
             //Debug.Log( PlayerPrefs.GetInt("Q1").ToString());
             if (PlayerPrefs.GetInt("currentQuestion").ToString()== "1")
             {
-            Destroy (GameObject.FindWithTag("Brush"));
+                GameObject[] brushes = GameObject.FindGameObjectsWithTag("Brush");
+                foreach(GameObject brush in brushes)
+                {
+                    GameObject.Destroy(brush);   
+                }         
+            
             }
             PlayerPrefs.SetInt("currentQuestion", 2);
             Qcount = 0;
