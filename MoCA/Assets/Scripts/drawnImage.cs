@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class drawnImage : MonoBehaviour
 {
@@ -51,11 +52,15 @@ public class drawnImage : MonoBehaviour
             //Change current question to enable/disable canvas or switch scene
             if (PlayerPrefs.GetInt("currentQuestion").ToString()== "2")
             {
-            PlayerPrefs.SetInt("currentQuestion", 3);
+                //Change Question number
+                PlayerPrefs.SetInt("currentQuestion", 3);
             }
             else if (PlayerPrefs.GetInt("currentQuestion").ToString()== "3")
             {
-
+                //Change Question number
+                PlayerPrefs.SetInt("currentQuestion", 4);
+                //Change Scene
+                SceneManager.LoadScene("Speech");
             }
 
     }
