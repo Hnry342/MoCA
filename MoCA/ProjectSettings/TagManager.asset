@@ -6,6 +6,7 @@ TagManager:
   tags:
   - AuthManager
   - Brush
+  - Rhino
   layers:
   - Default
   - TransparentFX
