@@ -6,6 +6,11 @@ using UnityEngine.UI;
 
 public class SpeechManager : MonoBehaviour
 {
+    public GameObject CanvasQ4;
+    public GameObject CanvasQ5;
+    public GameObject CanvasQ6;
+    public AudioSource audioRepeat;
+
     string  fileName = "textStream.txt";
 
     // Start is called before the first frame update
@@ -13,9 +18,11 @@ public class SpeechManager : MonoBehaviour
     {
         //if (PlayerPrefs.GetInt("currentQuestion").ToString()== "4")
         //{
-            GameObject.Find("Rhino").GetComponent<SpriteRenderer>().enabled = false;
-            GameObject.Find("Camel").GetComponent<SpriteRenderer>().enabled = false;
+            //GameObject.Find("Rhino").GetComponent<SpriteRenderer>().enabled = false;
+            //GameObject.Find("Camel").GetComponent<SpriteRenderer>().enabled = false;
        // }
+        PlayerPrefs.SetInt("currentQuestion", 5);
+
     }
 
     // Update is called once per frame
@@ -47,10 +54,23 @@ public class SpeechManager : MonoBehaviour
                 {
                     GameObject.Find("Camel").GetComponent<SpriteRenderer>().enabled = false;
                     PlayerPrefs.SetInt("currentQuestion", 5);
+                    CanvasQ4.SetActive(false);
+                    CanvasQ5.SetActive(true);
+                    
                 }
 
             }
         }
 ////////////////////////////////////////Question 4 end//////////////////
+        if (PlayerPrefs.GetInt("currentQuestion").ToString()== "5")
+        {
+            int stage = 0;
+
+            if (stage == 0){
+               // GameObject.Find("TextStreaming").GetComponent<UnityEngine.UI.Text>().text  = "Repeat these words";
+                audioRepeat.Play();
+            }
+
+        }
     }
 }
